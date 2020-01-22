@@ -174,6 +174,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlanController.cs" />
@@ -187,6 +188,18 @@
     <Compile Include="Migrations\202001221356469_AddPlan.cs" />
     <Compile Include="Migrations\202001221356469_AddPlan.Designer.cs">
       <DependentUpon>202001221356469_AddPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001221717254_relacionarPlanoClient.cs" />
+    <Compile Include="Migrations\202001221717254_relacionarPlanoClient.Designer.cs">
+      <DependentUpon>202001221717254_relacionarPlanoClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001221722366_AlimentarTabelaPlanoes.cs" />
+    <Compile Include="Migrations\202001221722366_AlimentarTabelaPlanoes.Designer.cs">
+      <DependentUpon>202001221722366_AlimentarTabelaPlanoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001221739288_ChangeNameInPlan.cs" />
+    <Compile Include="Migrations\202001221739288_ChangeNameInPlan.Designer.cs">
+      <DependentUpon>202001221739288_ChangeNameInPlan.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -257,6 +270,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Plan\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Client\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -280,6 +294,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001221356469_AddPlan.resx">
       <DependentUpon>202001221356469_AddPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001221717254_relacionarPlanoClient.resx">
+      <DependentUpon>202001221717254_relacionarPlanoClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001221722366_AlimentarTabelaPlanoes.resx">
+      <DependentUpon>202001221722366_AlimentarTabelaPlanoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001221739288_ChangeNameInPlan.resx">
+      <DependentUpon>202001221739288_ChangeNameInPlan.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

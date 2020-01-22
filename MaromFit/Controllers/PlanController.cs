@@ -10,22 +10,17 @@ namespace MaromFit.Controllers
 {
     public class PlanController : Controller
     {
+        ApplicationDbContext _context;
+        public PlanController()
+        {
+            _context = new ApplicationDbContext();
+        }
         // GET: Plano
         public ActionResult Index()
         {
-            var lstPlanos = new List<Plano>()
-            {
-                new Models.Plano() {Id = 1, Name = "Plano A", Value = 85 },
-                new Models.Plano() {Id = 2, Name = "Plano B", Value = 100},
-                new Models.Plano() {Id = 3, Name = "Plano C", Value = 130}
-            };
+            List<Plano> planos = _context.Plan.ToList();              
 
-            PlanClientViewModel model = new PlanClientViewModel()
-            {              
-                Planos = lstPlanos
-            };
-
-            return View(model);
+            return View(planos);
           
         }
 
