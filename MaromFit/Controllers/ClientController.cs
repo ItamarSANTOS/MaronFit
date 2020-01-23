@@ -1,6 +1,7 @@
 ﻿using MaromFit.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -17,7 +18,7 @@ namespace MaromFit.Controllers
         }
         public ActionResult Index()
         {
-            List<Client> clients = _context.Clients.ToList();
+            List<Client> clients = _context.Clients.Include(c => c.Plan).ToList();
             return View(clients);
         }
     }

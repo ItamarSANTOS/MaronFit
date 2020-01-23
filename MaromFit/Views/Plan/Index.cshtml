@@ -5,10 +5,10 @@
 }
 
 <h2>Planos</h2>
-@{ var planCol = Model;}
+@*@{ var planCol = Model;}*@
     <ul>
 
-        @foreach (var planos in planCol)
+        @foreach (var planos in Model)
         {
             <li> @planos.Name / @planos.Value R$</li>
         }
